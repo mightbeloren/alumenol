@@ -1,0 +1,106 @@
+{
+  "Width": 1920,
+  "Height": 1080,
+  "Screens": [
+    {
+      "Duration": 5,
+      "BackgroundColor": "#FFFFFF",
+      "Grid": {
+        "Rows": 4,
+        "Cols": 12,
+        "Cells": [
+          {
+            "RowStart": 1,
+            "ColStart": 1,
+            "RowSpan": 2,
+            "ColSpan": 3,
+            "BackgroundColor": "#FF0000",
+            "Media": {
+              "Source": "logo.png"
+            }
+          },
+          {
+            "RowStart": 1,
+            "ColStart": 4,
+            "RowSpan": 1,
+            "ColSpan": 9,
+            "BackgroundColor": "#00FF00",
+            "Text": {
+              "FontFamily": "Arial",
+              "Size": 48,
+              "Color": "#000000",
+              "Align": "Left",
+              "VAlign": "Top",
+              "Value": "HELLO"
+            }
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 4,
+            "RowSpan": 1,
+            "ColSpan": 9,
+            "BackgroundColor": "#0000FF",
+            "Text": {
+              "FontFamily": "Arial",
+              "Size": 24,
+              "Color": "#FFFFFF",
+              "Align": "Left",
+              "VAlign": "Bottom",
+              "Value": "Welcome to Lumenol"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Duration": 5,
+      "BackgroundColor": "#8cfc03",
+      "Grid": {
+        "Rows": 2,
+        "Cols": 2,
+        "Cells": [
+          {
+            "RowStart": 1,
+            "ColStart": 1,
+            "RowSpan": 2,
+            "ColSpan": 1,
+            "BackgroundColor": "#FF00FF",
+            "Media": {
+              "Source": "https://example.com/banner.gif"
+            }
+          },
+          {
+            "RowStart": 1,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#00FFFF",
+            "Text": {
+              "FontFamily": "Roboto",
+              "Size": 36,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "System Status"
+            }
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFA500",
+            "Text": {
+              "FontFamily": "Roboto",
+              "Size": 20,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Top",
+              "Value": "All services are operational."
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
