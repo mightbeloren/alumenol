@@ -164,12 +164,14 @@ class Program
         )
         {
             Console.Error.WriteLine("Grid dimensions out of reasonable range");
-            Environment.Exit(1);
+            shouldQuit = true;
+            return;
         }
 
         float cellHeight = config.Height / screen.Grid.Rows;
         float cellWidth = config.Width / screen.Grid.Cols;
 
+        var variables = GetVariables();
         foreach (Cell cell in screen.Grid.Cells)
         {
             float colStartPoint = (cell.ColStart - 1) * (float)cellWidth;
@@ -209,7 +211,7 @@ class Program
 
                 //replace the veriables with the actual values
                 string resolvedString = cell.Text.Value;
-                foreach (var variable in GetVariables())
+                foreach (var variable in variables)
                 {
                     resolvedString = resolvedString.Replace($"{{{variable.Key}}}", variable.Value);
                 }
@@ -222,9 +224,12 @@ class Program
                     cell.Text.FontColor
                 );
             }
-            else if (cell.Media != null && !string.IsNullOrEmpty(cell.Media.Source))
+            else if (
+                cell.Media != null
+                && !string.IsNullOrEmpty(cell.Media.Source)
+                && textures.TryGetValue(cell.Media.Source, out Texture2D cellTexture)
+            )
             {
-                Texture2D cellTexture = textures[cell.Media.Source];
                 Rectangle source = new Rectangle(0, 0, cellTexture.Width, cellTexture.Height);
                 Raylib.DrawTexturePro(
                     cellTexture,
