@@ -15,6 +15,7 @@ class Program
     private static double screenTimer;
     private static int screenIndex;
     private static bool isPaused = false;
+    private static bool shouldQuit = false;
 
     private static Dictionary<string, string> GetVariables()
     {
@@ -136,7 +137,7 @@ class Program
         Raylib.InitWindow(config.Width, config.Height, "alumenol");
         PreloadTextures();
         PreloadFonts();
-        while (!Raylib.WindowShouldClose())
+        while (!Raylib.WindowShouldClose() && !shouldQuit)
         {
             float deltaTime = Raylib.GetFrameTime();
             Raylib.BeginDrawing();
@@ -260,9 +261,7 @@ class Program
         //if space key is pressed change isPaused state
         if (Raylib.IsKeyPressed(KeyboardKey.Q))
         {
-            UnloadTextures();
-            UnloadFonts();
-            Raylib.CloseWindow();
+            shouldQuit = true;
         }
         if (Raylib.IsKeyPressed(KeyboardKey.Space))
         {
