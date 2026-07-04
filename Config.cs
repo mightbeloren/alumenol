@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using Raylib_cs;
 
 namespace alumenol;
 
@@ -13,32 +14,27 @@ public class Config
         return JsonSerializer.Deserialize<Config>(content);
     }
 
-    public (int, int, int, int) RGBaFromHex(string hexCode)
+    public static Color ColorFromHex(string hexCode)
     {
         hexCode = hexCode.TrimStart('#');
         int parts = hexCode.Length / 2;
-        switch (parts)
+        return parts switch
         {
-            case 3:
-                return (
-                    ParseHex(hexCode.Substring(0, 2)),
-                    ParseHex(hexCode.Substring(2, 2)),
-                    ParseHex(hexCode.Substring(4, 2)),
-                    255
-                );
-            case 4:
-                return (
-                    ParseHex(hexCode.Substring(0, 2)),
-                    ParseHex(hexCode.Substring(2, 2)),
-                    ParseHex(hexCode.Substring(4, 2)),
-                    ParseHex(hexCode.Substring(6, 2))
-                );
-            default:
-                return (135, 206, 235, 255);
-        }
+            3 => new Color(
+                Convert.ToByte(hexCode.Substring(0, 2), 16),
+                Convert.ToByte(hexCode.Substring(2, 2), 16),
+                Convert.ToByte(hexCode.Substring(4, 2), 16),
+                (byte)255
+            ),
+            4 => new Color(
+                Convert.ToByte(hexCode.Substring(0, 2), 16),
+                Convert.ToByte(hexCode.Substring(2, 2), 16),
+                Convert.ToByte(hexCode.Substring(4, 2), 16),
+                Convert.ToByte(hexCode.Substring(6, 2), 16)
+            ),
+            _ => Color.SkyBlue,
+        };
     }
-
-    private int ParseHex(string hexPart) => Convert.ToInt32(hexPart, 16);
 }
 
 public class Screen
@@ -62,6 +58,9 @@ public class Cell
     public int RowSpan { get; set; }
     public int ColSpan { get; set; }
     public string BackgroundColor { get; set; } = string.Empty;
+    public bool Border { get; set; } = false;
+    public int BorderThickness { get; set; }
+    public string BorderColor { get; set; } = string.Empty;
     public Media? Media { get; set; }
     public Text? Text { get; set; }
 }

@@ -6,98 +6,3098 @@
       "Duration": 5,
       "BackgroundColor": "#FFFFFF",
       "Grid": {
-        "Rows": 4,
-        "Cols": 12,
+        "Rows": 6,
+        "Cols": 3,
         "Cells": [
           {
             "RowStart": 1,
             "ColStart": 1,
-            "RowSpan": 2,
-            "ColSpan": 3,
-            "BackgroundColor": "#FF0000",
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
             "Media": {
-              "Source": "logo.png"
-            }
+              "Source": "assets/logo.png"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
           },
           {
             "RowStart": 1,
-            "ColStart": 4,
+            "ColStart": 2,
             "RowSpan": 1,
-            "ColSpan": 9,
-            "BackgroundColor": "#00FF00",
+            "ColSpan": 2,
+            "BackgroundColor": "#FFFFFF",
             "Text": {
-              "FontFamily": "Arial",
-              "Size": 48,
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 40,
               "Color": "#000000",
-              "Align": "Left",
-              "VAlign": "Top",
-              "Value": "HELLO"
-            }
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Table 1"
+            },
+            "Border": false,
+            "BorderThickness": 0
           },
           {
             "RowStart": 2,
-            "ColStart": 4,
+            "ColStart": 1,
             "RowSpan": 1,
-            "ColSpan": 9,
-            "BackgroundColor": "#0000FF",
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
             "Text": {
-              "FontFamily": "Arial",
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "SLNO"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Name"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Value"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
               "Size": 24,
-              "Color": "#FFFFFF",
-              "Align": "Left",
-              "VAlign": "Bottom",
-              "Value": "Welcome to Lumenol"
-            }
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor A-1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "16.3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor B-1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "20.0"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor C-1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "23.7"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor D-1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "27.4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
           }
         ]
       }
     },
     {
       "Duration": 5,
-      "BackgroundColor": "#8cfc03",
+      "BackgroundColor": "#FFFFFF",
       "Grid": {
-        "Rows": 2,
-        "Cols": 2,
+        "Rows": 6,
+        "Cols": 3,
         "Cells": [
           {
             "RowStart": 1,
             "ColStart": 1,
-            "RowSpan": 2,
+            "RowSpan": 1,
             "ColSpan": 1,
-            "BackgroundColor": "#FF00FF",
+            "BackgroundColor": "#FFFFFF",
             "Media": {
-              "Source": "https://example.com/banner.gif"
-            }
+              "Source": "assets/logo.png"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
           },
           {
             "RowStart": 1,
             "ColStart": 2,
             "RowSpan": 1,
-            "ColSpan": 1,
-            "BackgroundColor": "#00FFFF",
+            "ColSpan": 2,
+            "BackgroundColor": "#FFFFFF",
             "Text": {
-              "FontFamily": "Roboto",
-              "Size": 36,
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 40,
               "Color": "#000000",
               "Align": "Center",
               "VAlign": "Center",
-              "Value": "System Status"
-            }
+              "Value": "Table 2"
+            },
+            "Border": false,
+            "BorderThickness": 0
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "SLNO"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
           },
           {
             "RowStart": 2,
             "ColStart": 2,
             "RowSpan": 1,
             "ColSpan": 1,
-            "BackgroundColor": "#FFA500",
+            "BackgroundColor": "#DDDDDD",
             "Text": {
-              "FontFamily": "Roboto",
-              "Size": 20,
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
               "Color": "#000000",
               "Align": "Center",
-              "VAlign": "Top",
-              "Value": "All services are operational."
-            }
+              "VAlign": "Center",
+              "Value": "Name"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Value"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor A-2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "17.6"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor B-2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "21.3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor C-2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "25.0"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor D-2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "28.7"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          }
+        ]
+      }
+    },
+    {
+      "Duration": 5,
+      "BackgroundColor": "#FFFFFF",
+      "Grid": {
+        "Rows": 6,
+        "Cols": 3,
+        "Cells": [
+          {
+            "RowStart": 1,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Media": {
+              "Source": "assets/logo.png"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 1,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 2,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 40,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Table 3"
+            },
+            "Border": false,
+            "BorderThickness": 0
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "SLNO"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Name"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Value"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor A-3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "18.9"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor B-3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "22.6"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor C-3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "26.3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor D-3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "30.0"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          }
+        ]
+      }
+    },
+    {
+      "Duration": 5,
+      "BackgroundColor": "#FFFFFF",
+      "Grid": {
+        "Rows": 6,
+        "Cols": 3,
+        "Cells": [
+          {
+            "RowStart": 1,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Media": {
+              "Source": "assets/logo.png"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 1,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 2,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 40,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Table 4"
+            },
+            "Border": false,
+            "BorderThickness": 0
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "SLNO"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Name"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Value"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor A-4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "20.2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor B-4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "23.9"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor C-4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "27.6"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor D-4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "31.3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          }
+        ]
+      }
+    },
+    {
+      "Duration": 5,
+      "BackgroundColor": "#FFFFFF",
+      "Grid": {
+        "Rows": 6,
+        "Cols": 3,
+        "Cells": [
+          {
+            "RowStart": 1,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Media": {
+              "Source": "assets/logo.png"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 1,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 2,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 40,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Table 5"
+            },
+            "Border": false,
+            "BorderThickness": 0
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "SLNO"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Name"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Value"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor A-5"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "21.5"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor B-5"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "25.2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor C-5"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "28.9"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor D-5"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "32.6"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          }
+        ]
+      }
+    },
+    {
+      "Duration": 5,
+      "BackgroundColor": "#FFFFFF",
+      "Grid": {
+        "Rows": 6,
+        "Cols": 3,
+        "Cells": [
+          {
+            "RowStart": 1,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Media": {
+              "Source": "assets/logo.png"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 1,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 2,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 40,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Table 6"
+            },
+            "Border": false,
+            "BorderThickness": 0
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "SLNO"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Name"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Value"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor A-6"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "22.8"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor B-6"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "26.5"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor C-6"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "30.2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor D-6"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "33.9"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          }
+        ]
+      }
+    },
+    {
+      "Duration": 5,
+      "BackgroundColor": "#FFFFFF",
+      "Grid": {
+        "Rows": 6,
+        "Cols": 3,
+        "Cells": [
+          {
+            "RowStart": 1,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Media": {
+              "Source": "assets/logo.png"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 1,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 2,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 40,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Table 7"
+            },
+            "Border": false,
+            "BorderThickness": 0
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "SLNO"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Name"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Value"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor A-7"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "24.1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor B-7"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "27.8"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor C-7"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "31.5"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor D-7"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "35.2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          }
+        ]
+      }
+    },
+    {
+      "Duration": 5,
+      "BackgroundColor": "#FFFFFF",
+      "Grid": {
+        "Rows": 6,
+        "Cols": 3,
+        "Cells": [
+          {
+            "RowStart": 1,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Media": {
+              "Source": "assets/logo.png"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 1,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 2,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 40,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Table 8"
+            },
+            "Border": false,
+            "BorderThickness": 0
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "SLNO"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Name"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Value"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor A-8"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "25.4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor B-8"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "29.1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor C-8"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "32.8"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor D-8"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "36.5"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          }
+        ]
+      }
+    },
+    {
+      "Duration": 5,
+      "BackgroundColor": "#FFFFFF",
+      "Grid": {
+        "Rows": 6,
+        "Cols": 3,
+        "Cells": [
+          {
+            "RowStart": 1,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Media": {
+              "Source": "assets/logo.png"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 1,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 2,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 40,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Table 9"
+            },
+            "Border": false,
+            "BorderThickness": 0
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "SLNO"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Name"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Value"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor A-9"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "26.7"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor B-9"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "30.4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor C-9"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "34.1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor D-9"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "37.8"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          }
+        ]
+      }
+    },
+    {
+      "Duration": 5,
+      "BackgroundColor": "#FFFFFF",
+      "Grid": {
+        "Rows": 6,
+        "Cols": 3,
+        "Cells": [
+          {
+            "RowStart": 1,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Media": {
+              "Source": "assets/logo.png"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 1,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 2,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 40,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Table 10"
+            },
+            "Border": false,
+            "BorderThickness": 0
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "SLNO"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Name"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 2,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#DDDDDD",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 28,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Value"
+            },
+            "Border": true,
+            "BorderThickness": 2,
+            "BorderColor": "#000000"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor A-10"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 3,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "28.0"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "2"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor B-10"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 4,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "31.7"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "3"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor C-10"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 5,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#FFFFFF",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "35.4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 1,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "4"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 2,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "Sensor D-10"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
+          },
+          {
+            "RowStart": 6,
+            "ColStart": 3,
+            "RowSpan": 1,
+            "ColSpan": 1,
+            "BackgroundColor": "#F2F2F2",
+            "Text": {
+              "FontFamily": "assets/fonts/InterVariable.ttf",
+              "Size": 24,
+              "Color": "#000000",
+              "Align": "Center",
+              "VAlign": "Center",
+              "Value": "39.1"
+            },
+            "Border": true,
+            "BorderThickness": 1,
+            "BorderColor": "#CCCCCC"
           }
         ]
       }

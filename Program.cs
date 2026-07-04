@@ -1,20 +1,18 @@
-﻿using Silk.NET.Input;
-using Silk.NET.Maths;
-using Silk.NET.OpenGL;
-using Silk.NET.Windowing;
+﻿using System.Numerics;
+using Raylib_cs;
 
 namespace alumenol;
 
 class Program
 {
-    private static IWindow _window = null!;
     private static readonly string ConfigPath = Path.Combine(
         Directory.GetCurrentDirectory(),
         "config.json"
     );
+    private static Dictionary<string, Texture2D> textures = new();
+    private static Dictionary<string, Font> fonts = new();
 
     private static Config config = null!;
-    private static Silk.NET.OpenGL.GL gl = null!;
 
     static void Main(string[] args)
     {
@@ -39,36 +37,95 @@ class Program
                 Initialize();
             }
         }
-        catch
+        catch (Exception ex)
         {
-            Console.Error.WriteLine("Unable to parse config.json");
+            Console.Error.WriteLine($"Unable to parse config.json : {ex.ToString()}");
             Environment.Exit(1);
         }
     }
 
-    public static void OnLoad()
+    public static void PreloadTextures()
     {
-        Console.WriteLine("Loaded");
-        IInputContext input = _window.CreateInput();
-        for (int i = 0; i < input.Keyboards.Count; i++)
-            input.Keyboards[i].KeyDown += KeyDown;
+        foreach (Screen screen in config.Screens)
+        {
+            foreach (Cell cell in screen.Grid.Cells)
+            {
+                if (
+                    cell.Media != null
+                    && !string.IsNullOrEmpty(cell.Media.Source)
+                    && File.Exists(Path.Combine(Directory.GetCurrentDirectory(), cell.Media.Source))
+                )
+                {
+                    textures[cell.Media.Source] = Raylib.LoadTexture(cell.Media.Source);
+                    Console.WriteLine($"texture {cell.Media.Source} is preloaded");
+                }
+            }
+        }
     }
 
-    private static void KeyDown(IKeyboard keyboard, Key key, int keyCode)
+    public static void PreloadFonts()
     {
-        if (key == Key.Escape || key == Key.Q)
-            _window.Close();
+        foreach (Screen screen in config.Screens)
+        {
+            foreach (Cell cell in screen.Grid.Cells)
+            {
+                if (
+                    cell.Text != null
+                    && !string.IsNullOrEmpty(cell.Text.FontFamily)
+                    && File.Exists(
+                        Path.Combine(Directory.GetCurrentDirectory(), cell.Text.FontFamily)
+                    )
+                )
+                {
+                    fonts[cell.Text.FontFamily] = Raylib.LoadFont(cell.Text.FontFamily);
+                    Console.WriteLine($"font {cell.Text.FontFamily} is preloaded");
+                }
+            }
+        }
+    }
+
+    public static void Initialize()
+    {
+        Raylib.InitWindow(config.Width, config.Height, "alumenol");
+        PreloadTextures();
+        PreloadFonts();
+        while (!Raylib.WindowShouldClose())
+        {
+            float deltaTime = Raylib.GetFrameTime();
+            Raylib.BeginDrawing();
+            OnRender(deltaTime);
+            OnUpdate(deltaTime);
+            Raylib.EndDrawing();
+        }
+        UnloadTextures();
+        UnloadFonts();
+        Raylib.CloseWindow();
+    }
+
+    public static void UnloadTextures()
+    {
+        foreach (var texture in textures)
+        {
+            Console.WriteLine($"{texture.Key} is unloaded");
+            Raylib.UnloadTexture(texture.Value);
+        }
+    }
+
+    public static void UnloadFonts()
+    {
+        foreach (var font in fonts)
+        {
+            Console.WriteLine($"{font.Key} is unloaded");
+            Raylib.UnloadFont(font.Value);
+        }
     }
 
     public static void OnRender(double deltaTime)
     {
         var screen = config.Screens[screenIndex];
         var bg = screen.BackgroundColor;
+        Raylib.ClearBackground(Config.ColorFromHex(screen.BackgroundColor));
 
-        (int R, int G, int B, int A) color = config.RGBaFromHex(bg);
-        // Console.WriteLine($"screen bgcolor : {color}");
-        gl.ClearColor(color.R / 255f, color.G / 255f, color.B / 255f, color.A / 255f);
-        gl.Clear(ClearBufferMask.ColorBufferBit);
         if (
             screen.Grid.Rows <= 0
             || screen.Grid.Rows > 100
@@ -82,8 +139,6 @@ class Program
 
         float cellHeight = config.Height / screen.Grid.Rows;
         float cellWidth = config.Width / screen.Grid.Cols;
-        // Console.WriteLine($"cell height : {cellHeight}");
-        // Console.WriteLine($"cell width : {cellWidth}");
 
         foreach (Cell cell in screen.Grid.Cells)
         {
@@ -93,25 +148,85 @@ class Program
             float rowStartPoint = (cell.RowStart - 1) * (float)cellHeight;
             float rowEndPoint = (cell.RowStart - 1 + cell.RowSpan) * (float)cellHeight;
 
-            // Console.WriteLine(
-            //     $"col start : {colStartPoint}, col end : {colEndPoint}, row start : {rowStartPoint}, row end : {rowEndPoint}"
-            // );
             int glX = (int)colStartPoint;
-            int glY = (int)(config.Height - rowEndPoint);
+            int glY = (int)rowStartPoint;
             int glW = (int)(colEndPoint - colStartPoint);
             int glH = (int)(rowEndPoint - rowStartPoint);
+            Rectangle destRect = new Rectangle(glX, glY, glW, glH);
+            if (
+                cell.Text != null
+                && !string.IsNullOrEmpty(cell.Text.FontFamily)
+                && File.Exists(Path.Combine(Directory.GetCurrentDirectory(), cell.Text.FontFamily))
+            )
+            {
+                Raylib.DrawRectangle(glX, glY, glW, glH, Config.ColorFromHex(cell.BackgroundColor));
+                Vector2 textSize = Raylib.MeasureTextEx(
+                    fonts[cell.Text.FontFamily],
+                    cell.Text.Value,
+                    cell.Text.Size,
+                    0f
+                );
 
-            (int R, int G, int B, int A) cellcolor = config.RGBaFromHex(cell.BackgroundColor);
-            gl.Enable(EnableCap.ScissorTest);
-            gl.Scissor(glX, glY, (uint)glW, (uint)glH);
-            gl.ClearColor(
-                cellcolor.R / 255f,
-                cellcolor.G / 255f,
-                cellcolor.B / 255f,
-                cellcolor.A / 255f
-            );
-            gl.Clear(ClearBufferMask.ColorBufferBit);
-            gl.Disable(EnableCap.ScissorTest);
+                float x = cell.Text.Align switch
+                {
+                    "Center" => glX + (glW - textSize.X) / 2f,
+                    "Right" => glX + glW - textSize.X,
+                    _ => glX,
+                };
+
+                float y = cell.Text.VAlign switch
+                {
+                    "Center" => glY + (glH - textSize.Y) / 2f,
+                    "Bottom" => glY + glH - textSize.Y,
+                    _ => glY,
+                };
+
+                Raylib.DrawTextEx(
+                    fonts[cell.Text.FontFamily],
+                    cell.Text.Value,
+                    new Vector2(x, y),
+                    cell.Text.Size,
+                    0f,
+                    Config.ColorFromHex(cell.Text.Color)
+                );
+                // Raylib.DrawTextEx(
+                //     fonts[cell.Text.FontFamily],
+                //     cell.Text.Value,
+                //     new System.Numerics.Vector2(glX, glY),
+                //     cell.Text.Size,
+                //     0f,
+                //     Color.Black
+                // );
+            }
+            else if (
+                cell.Media != null
+                && !string.IsNullOrEmpty(cell.Media.Source)
+                && File.Exists(Path.Combine(Directory.GetCurrentDirectory(), cell.Media.Source))
+            )
+            {
+                Texture2D cellTexture = textures[cell.Media.Source];
+                Rectangle source = new Rectangle(0, 0, cellTexture.Width, cellTexture.Height);
+                Raylib.DrawTexturePro(
+                    cellTexture,
+                    source,
+                    destRect,
+                    new System.Numerics.Vector2(0, 0),
+                    0f,
+                    Color.White
+                );
+            }
+            else
+            {
+                Raylib.DrawText("Invalid Cell Content", glX, glY, 20, Color.Red);
+            }
+            if (cell.Border)
+            {
+                Raylib.DrawRectangleLinesEx(
+                    destRect,
+                    cell.BorderThickness,
+                    Config.ColorFromHex(cell.BorderColor)
+                );
+            }
         }
     }
 
@@ -135,23 +250,5 @@ class Program
             }
         }
         Console.WriteLine($"screen index : {screenIndex}");
-    }
-
-    public static void Initialize()
-    {
-        WindowOptions options = WindowOptions.Default with
-        {
-            Size = new Vector2D<int>(config.Width, config.Height),
-            Title = "Alumenol",
-        };
-        _window = Window.Create(options);
-        _window.Load += () =>
-        {
-            gl = _window.CreateOpenGL();
-            OnLoad();
-        };
-        _window.Update += OnUpdate;
-        _window.Render += OnRender;
-        _window.Run();
     }
 }
