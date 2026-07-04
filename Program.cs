@@ -141,8 +141,8 @@ class Program
         {
             float deltaTime = Raylib.GetFrameTime();
             Raylib.BeginDrawing();
-            OnRender(deltaTime);
             OnUpdate(deltaTime);
+            OnRender(deltaTime);
             Raylib.EndDrawing();
         }
         UnloadTextures();
@@ -183,11 +183,7 @@ class Program
             int glW = (int)(colEndPoint - colStartPoint);
             int glH = (int)(rowEndPoint - rowStartPoint);
             Rectangle destRect = new Rectangle(glX, glY, glW, glH);
-            if (
-                cell.Text != null
-                && !string.IsNullOrEmpty(cell.Text.FontFamily)
-                && File.Exists(Path.Combine(Directory.GetCurrentDirectory(), cell.Text.FontFamily))
-            )
+            if (cell.Text != null && !string.IsNullOrEmpty(cell.Text.FontFamily))
             {
                 Raylib.DrawRectangle(glX, glY, glW, glH, cell.BgColor);
                 Vector2 textSize = Raylib.MeasureTextEx(
@@ -212,27 +208,21 @@ class Program
                 };
 
                 //replace the veriables with the actual values
+                string resolvedString = cell.Text.Value;
                 foreach (var variable in GetVariables())
                 {
-                    cell.Text.Value = cell.Text.Value.Replace(
-                        $"{{{variable.Key}}}",
-                        variable.Value
-                    );
+                    resolvedString = resolvedString.Replace($"{{{variable.Key}}}", variable.Value);
                 }
                 Raylib.DrawTextEx(
                     fonts[cell.Text.FontFamily],
-                    cell.Text.Value,
+                    resolvedString,
                     new Vector2(x, y),
                     cell.Text.Size,
                     0f,
                     cell.Text.FontColor
                 );
             }
-            else if (
-                cell.Media != null
-                && !string.IsNullOrEmpty(cell.Media.Source)
-                && File.Exists(Path.Combine(Directory.GetCurrentDirectory(), cell.Media.Source))
-            )
+            else if (cell.Media != null && !string.IsNullOrEmpty(cell.Media.Source))
             {
                 Texture2D cellTexture = textures[cell.Media.Source];
                 Rectangle source = new Rectangle(0, 0, cellTexture.Width, cellTexture.Height);

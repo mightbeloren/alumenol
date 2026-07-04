@@ -43,8 +43,10 @@ public class Screen
     public int Duration { get; set; }
     public string BackgroundColor { get; set; } = string.Empty;
 
+    private Color? _BgColor;
+
     [JsonIgnore]
-    public Color BgColor => Config.ColorFromHex(BackgroundColor);
+    public Color BgColor => _BgColor ??= Config.ColorFromHex(BackgroundColor);
     public Grid Grid { get; set; } = null!;
 }
 
@@ -63,14 +65,18 @@ public class Cell
     public int ColSpan { get; set; }
     public string BackgroundColor { get; set; } = string.Empty;
 
+    private Color? _BgColor;
+
     [JsonIgnore]
-    public Color BgColor => Config.ColorFromHex(BackgroundColor);
+    public Color BgColor => _BgColor ??= Config.ColorFromHex(BackgroundColor);
     public bool Border { get; set; } = false;
     public int BorderThickness { get; set; }
     public string BorderColor { get; set; } = string.Empty;
 
+    private Color? _CellBorderColor;
+
     [JsonIgnore]
-    public Color CellBorderColor => Config.ColorFromHex(BorderColor);
+    public Color CellBorderColor => _CellBorderColor ??= Config.ColorFromHex(BorderColor);
     public Media? Media { get; set; }
     public Text? Text { get; set; }
 }
@@ -86,8 +92,10 @@ public class Text
     public int Size { get; set; }
     public string Color { get; set; } = string.Empty;
 
+    private Color? _FontColor;
+
     [JsonIgnore]
-    public Color FontColor => Config.ColorFromHex(Color);
+    public Color FontColor => _FontColor ??= Config.ColorFromHex(Color);
     public string Align { get; set; } = string.Empty;
     public string VAlign { get; set; } = string.Empty;
     public string Value { get; set; } = string.Empty;

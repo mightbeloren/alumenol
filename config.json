@@ -34,7 +34,7 @@
               "Color": "#000000",
               "Align": "Center",
               "VAlign": "Center",
-              "Value": "Table 1"
+              "Value": "{DateTime}"
             },
             "Border": false,
             "BorderThickness": 0
