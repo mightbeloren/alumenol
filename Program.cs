@@ -14,6 +14,7 @@ class Program
     private static Config config = null!;
     private static double screenTimer;
     private static int screenIndex;
+    private static bool isPaused = false;
 
     private static Dictionary<string, string> GetVariables()
     {
@@ -256,19 +257,59 @@ class Program
 
     public static void OnUpdate(double deltaTime)
     {
-        screenTimer += deltaTime;
-        if (screenTimer >= (double)config.Screens[screenIndex].Duration)
+        //if space key is pressed change isPaused state
+        if (Raylib.IsKeyPressed(KeyboardKey.Q))
+        {
+            UnloadTextures();
+            UnloadFonts();
+            Raylib.CloseWindow();
+        }
+        if (Raylib.IsKeyPressed(KeyboardKey.Space))
+        {
+            isPaused = !isPaused;
+        }
+        if (!isPaused)
+        {
+            //update the screentimer and index if the timer exceeds more than or equal to the screen duration
+            screenTimer += deltaTime;
+            if (screenTimer >= (double)config.Screens[screenIndex].Duration)
+            {
+                if (config.Screens.Count == screenIndex + 1)
+                {
+                    screenIndex = 0;
+                }
+                else
+                {
+                    screenIndex++;
+                }
+                screenTimer = 0;
+            }
+        }
+        //increment screen index and reset timer if right key is pressed
+        if (Raylib.IsKeyPressed(KeyboardKey.Right))
         {
             if (config.Screens.Count == screenIndex + 1)
             {
                 screenIndex = 0;
-                screenTimer = 0;
             }
             else
             {
                 screenIndex++;
-                screenTimer = 0;
             }
+            screenTimer = 0;
+        }
+        //decrement screen index and reset timer if left key is pressed
+        if (Raylib.IsKeyPressed(KeyboardKey.Left))
+        {
+            if (screenIndex == 0)
+            {
+                screenIndex = config.Screens.Count - 1;
+            }
+            else
+            {
+                screenIndex--;
+            }
+            screenTimer = 0;
         }
     }
 }

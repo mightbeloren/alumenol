@@ -141,6 +141,13 @@ Run on the target OS (cross-OS AOT/single-file publishing isn't supported — bu
 
 Example: `"Value": "It is {Time12} on {dddd}"`.
 
+## Keyboard Actions
+
+- **Space** On Key Press the screens will be paused and will not change to enable screen auto change press space again
+- **RightArrow** On Key Press screen will change with the next screen and it will wrap to first screen when it hits the last screen
+- **LeftArrow** On Key Press screen will change with the previous screen and it will wrap to last screen when it hits the first screen
+- **Q** On Key Press the application will exit
+
 ## Known limitations
 
 - No JPG support (convert to PNG)
