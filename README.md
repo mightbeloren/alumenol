@@ -8,44 +8,44 @@ You define one or more **Screens**. Each screen has a **Grid** (rows/columns), a
 
 ## Top-level fields
 
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Width` | int | yes | Output window/canvas width in pixels |
-| `Height` | int | yes | Output window/canvas height in pixels |
-| `Screens` | array | yes | List of Screen objects, played in order, looping |
+| Field     | Type  | Required | Description                                      |
+| --------- | ----- | -------- | ------------------------------------------------ |
+| `Width`   | int   | yes      | Output window/canvas width in pixels             |
+| `Height`  | int   | yes      | Output window/canvas height in pixels            |
+| `Screens` | array | yes      | List of Screen objects, played in order, looping |
 
 ## Screen fields
 
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Duration` | int | yes | Seconds this screen stays on-screen before advancing |
-| `BackgroundColor` | string (hex) | no | Background color, e.g. `"#FFFFFF"`. Falls back to sky blue if invalid/missing |
-| `Grid` | object | yes | The Grid object for this screen |
+| Field             | Type         | Required | Description                                                                   |
+| ----------------- | ------------ | -------- | ----------------------------------------------------------------------------- |
+| `Duration`        | int          | yes      | Seconds this screen stays on-screen before advancing                          |
+| `BackgroundColor` | string (hex) | no       | Background color, e.g. `"#FFFFFF"`. Falls back to sky blue if invalid/missing |
+| `Grid`            | object       | yes      | The Grid object for this screen                                               |
 
 ## Grid fields
 
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Rows` | int | yes | Number of grid rows (1–100) |
-| `Cols` | int | yes | Number of grid columns (1–100) |
-| `Cells` | array | yes | List of Cell objects |
+| Field   | Type  | Required | Description                    |
+| ------- | ----- | -------- | ------------------------------ |
+| `Rows`  | int   | yes      | Number of grid rows (1–100)    |
+| `Cols`  | int   | yes      | Number of grid columns (1–100) |
+| `Cells` | array | yes      | List of Cell objects           |
 
 Grid cell size is computed as `Width / Cols` and `Height / Rows` — keep dimensions evenly divisible for clean layouts, or accept minor rounding.
 
 ## Cell fields
 
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `RowStart` | int | yes | 1-indexed row where the cell begins |
-| `ColStart` | int | yes | 1-indexed column where the cell begins |
-| `RowSpan` | int | yes | Number of rows the cell occupies |
-| `ColSpan` | int | yes | Number of columns the cell occupies |
-| `BackgroundColor` | string (hex) | no | Cell background color |
-| `Border` | bool | no | Whether to draw a border around the cell |
-| `BorderThickness` | int | no | Border thickness in pixels (only used if `Border` is true) |
-| `BorderColor` | string (hex) | no | Border color (only used if `Border` is true) |
-| `Text` | object | no* | Text content — see below |
-| `Media` | object | no* | Image content — see below |
+| Field             | Type         | Required | Description                                                |
+| ----------------- | ------------ | -------- | ---------------------------------------------------------- |
+| `RowStart`        | int          | yes      | 1-indexed row where the cell begins                        |
+| `ColStart`        | int          | yes      | 1-indexed column where the cell begins                     |
+| `RowSpan`         | int          | yes      | Number of rows the cell occupies                           |
+| `ColSpan`         | int          | yes      | Number of columns the cell occupies                        |
+| `BackgroundColor` | string (hex) | no       | Cell background color                                      |
+| `Border`          | bool         | no       | Whether to draw a border around the cell                   |
+| `BorderThickness` | int          | no       | Border thickness in pixels (only used if `Border` is true) |
+| `BorderColor`     | string (hex) | no       | Border color (only used if `Border` is true)               |
+| `Text`            | object       | no*      | Text content — see below                                   |
+| `Media`           | object       | no*      | Image content — see below                                  |
 
 *A cell should have exactly one of `Text` or `Media`. If neither is set, it renders as an "Invalid Cell" placeholder. If both are set, `Text` takes priority.
 
@@ -53,20 +53,20 @@ Grid cell size is computed as `Width / Cols` and `Height / Rows` — keep dimens
 
 ## Text fields
 
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `FontFamily` | string | yes | Path to a `.ttf`/`.otf` font file (relative to config), e.g. `"InterVariable.ttf"`. Not a system font name — the file must exist |
-| `Size` | int | yes | Font size in pixels |
-| `Color` | string (hex) | yes | Text color |
-| `Align` | string | yes | Horizontal alignment: `Left`, `Center`, `Right` |
-| `VAlign` | string | yes | Vertical alignment: `Top`, `Center`, `Bottom` |
-| `Value` | string | yes | The text to display |
+| Field        | Type         | Required | Description                                                                                                                      |
+| ------------ | ------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `FontFamily` | string       | yes      | Path to a `.ttf`/`.otf` font file (relative to config), e.g. `"InterVariable.ttf"`. Not a system font name — the file must exist |
+| `Size`       | int          | yes      | Font size in pixels                                                                                                              |
+| `Color`      | string (hex) | yes      | Text color                                                                                                                       |
+| `Align`      | string       | yes      | Horizontal alignment: `Left`, `Center`, `Right`                                                                                  |
+| `VAlign`     | string       | yes      | Vertical alignment: `Top`, `Center`, `Bottom`                                                                                    |
+| `Value`      | string       | yes      | The text to display                                                                                                              |
 
 ## Media fields
 
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `Source` | string | yes | Path to an image file (relative to config). **PNG, BMP, TGA, GIF, QOI supported. JPG is not supported by default.** GIFs render as a static first frame only — no animation. |
+| Field    | Type   | Required | Description                                                                                                                                                                  |
+| -------- | ------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Source` | string | yes      | Path to an image file (relative to config). **PNG, BMP, TGA, GIF, QOI supported. JPG is not supported by default.** GIFs render as a static first frame only — no animation. |
 
 ## Hex color format
 
@@ -103,15 +103,43 @@ Accepts `#RRGGBB` or `#RRGGBBAA` (with or without leading `#`). Invalid or malfo
   }
 }
 ```
+
 ## Build
- 
+
 **Requirement: .NET 10 SDK** (mandatory, any OS).
- 
+
 ```
 dotnet publish --self-contained true -p:PublishSingleFile=true
 ```
- 
+
 Run on the target OS (cross-OS AOT/single-file publishing isn't supported — build Windows binaries on Windows, Linux on Linux, macOS on macOS).
+
+## Variables
+
+`Text.Value` supports dynamic tokens, wrapped in `{ }`, resolved at render time (updated live, not baked in at config load):
+
+| Token        | Example output           | Description          |
+| ------------ | ------------------------ | -------------------- |
+| `{HH}`       | `14`                     | Hour, 24hr           |
+| `{hh}`       | `02`                     | Hour, 12hr           |
+| `{mm}`       | `05`                     | Minute               |
+| `{ss}`       | `09`                     | Second               |
+| `{tt}`       | `PM`                     | AM/PM                |
+| `{yyyy}`     | `2026`                   | Year, 4-digit        |
+| `{yy}`       | `26`                     | Year, 2-digit        |
+| `{MM}`       | `07`                     | Month number         |
+| `{MMM}`      | `Jul`                    | Month, short name    |
+| `{MMMM}`     | `July`                   | Month, full name     |
+| `{dd}`       | `04`                     | Day number           |
+| `{ddd}`      | `Sat`                    | Day, short name      |
+| `{dddd}`     | `Saturday`               | Day, full name       |
+| `{Time}`     | `14:05:09`               | HH:mm:ss             |
+| `{Time12}`   | `02:05 PM`               | 12hr time with AM/PM |
+| `{Date}`     | `2026-07-04`             | yyyy-MM-dd           |
+| `{DateLong}` | `Saturday, July 4, 2026` | Full written date    |
+| `{DateTime}` | `2026-07-04 14:05:09`    | Full date + time     |
+
+Example: `"Value": "It is {Time12} on {dddd}"`.
 
 ## Known limitations
 

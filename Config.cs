@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 using Raylib_cs;
 
 namespace alumenol;
@@ -41,6 +42,9 @@ public class Screen
 {
     public int Duration { get; set; }
     public string BackgroundColor { get; set; } = string.Empty;
+
+    [JsonIgnore]
+    public Color BgColor => Config.ColorFromHex(BackgroundColor);
     public Grid Grid { get; set; } = null!;
 }
 
@@ -58,9 +62,15 @@ public class Cell
     public int RowSpan { get; set; }
     public int ColSpan { get; set; }
     public string BackgroundColor { get; set; } = string.Empty;
+
+    [JsonIgnore]
+    public Color BgColor => Config.ColorFromHex(BackgroundColor);
     public bool Border { get; set; } = false;
     public int BorderThickness { get; set; }
     public string BorderColor { get; set; } = string.Empty;
+
+    [JsonIgnore]
+    public Color CellBorderColor => Config.ColorFromHex(BorderColor);
     public Media? Media { get; set; }
     public Text? Text { get; set; }
 }
@@ -75,6 +85,9 @@ public class Text
     public string FontFamily { get; set; } = string.Empty;
     public int Size { get; set; }
     public string Color { get; set; } = string.Empty;
+
+    [JsonIgnore]
+    public Color FontColor => Config.ColorFromHex(Color);
     public string Align { get; set; } = string.Empty;
     public string VAlign { get; set; } = string.Empty;
     public string Value { get; set; } = string.Empty;

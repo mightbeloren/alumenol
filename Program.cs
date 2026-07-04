@@ -11,8 +11,35 @@ class Program
     );
     private static Dictionary<string, Texture2D> textures = new();
     private static Dictionary<string, Font> fonts = new();
-
     private static Config config = null!;
+    private static double screenTimer;
+    private static int screenIndex;
+
+    private static Dictionary<string, string> GetVariables()
+    {
+        var now = DateTime.Now;
+        return new Dictionary<string, string>()
+        {
+            { "HH", now.ToString("HH") },
+            { "hh", now.ToString("hh") },
+            { "mm", now.ToString("mm") },
+            { "ss", now.ToString("ss") },
+            { "tt", now.ToString("tt") },
+            { "yyyy", now.ToString("yyyy") },
+            { "yy", now.ToString("yy") },
+            { "MM", now.ToString("MM") },
+            { "MMM", now.ToString("MMM") },
+            { "MMMM", now.ToString("MMMM") },
+            { "dd", now.ToString("dd") },
+            { "ddd", now.ToString("ddd") },
+            { "dddd", now.ToString("dddd") },
+            { "Time", now.ToString("HH:mm:ss") },
+            { "Time12", now.ToString("hh:mm tt") },
+            { "Date", now.ToString("yyyy-MM-dd") },
+            { "DateLong", now.ToString("dddd, MMMM d, yyyy") },
+            { "DateTime", now.ToString("yyyy-MM-dd HH:mm:ss") },
+        };
+    }
 
     static void Main(string[] args)
     {
@@ -44,7 +71,7 @@ class Program
         }
     }
 
-    public static void PreloadTextures()
+    private static void PreloadTextures()
     {
         foreach (Screen screen in config.Screens)
         {
@@ -57,30 +84,49 @@ class Program
                 )
                 {
                     textures[cell.Media.Source] = Raylib.LoadTexture(cell.Media.Source);
-                    Console.WriteLine($"texture {cell.Media.Source} is preloaded");
                 }
             }
         }
     }
 
-    public static void PreloadFonts()
+    private static void PreloadFonts()
     {
         foreach (Screen screen in config.Screens)
         {
             foreach (Cell cell in screen.Grid.Cells)
             {
-                if (
-                    cell.Text != null
-                    && !string.IsNullOrEmpty(cell.Text.FontFamily)
-                    && File.Exists(
-                        Path.Combine(Directory.GetCurrentDirectory(), cell.Text.FontFamily)
-                    )
-                )
+                if (cell.Text != null && !string.IsNullOrEmpty(cell.Text.FontFamily))
                 {
-                    fonts[cell.Text.FontFamily] = Raylib.LoadFont(cell.Text.FontFamily);
-                    Console.WriteLine($"font {cell.Text.FontFamily} is preloaded");
+                    if (
+                        File.Exists(
+                            Path.Combine(Directory.GetCurrentDirectory(), cell.Text.FontFamily)
+                        )
+                    )
+                    {
+                        fonts[cell.Text.FontFamily] = Raylib.LoadFont(cell.Text.FontFamily);
+                    }
+                    else
+                    {
+                        fonts[cell.Text.FontFamily] = Raylib.GetFontDefault();
+                    }
                 }
             }
+        }
+    }
+
+    private static void UnloadTextures()
+    {
+        foreach (var texture in textures)
+        {
+            Raylib.UnloadTexture(texture.Value);
+        }
+    }
+
+    private static void UnloadFonts()
+    {
+        foreach (var font in fonts)
+        {
+            Raylib.UnloadFont(font.Value);
         }
     }
 
@@ -102,29 +148,11 @@ class Program
         Raylib.CloseWindow();
     }
 
-    public static void UnloadTextures()
-    {
-        foreach (var texture in textures)
-        {
-            Console.WriteLine($"{texture.Key} is unloaded");
-            Raylib.UnloadTexture(texture.Value);
-        }
-    }
-
-    public static void UnloadFonts()
-    {
-        foreach (var font in fonts)
-        {
-            Console.WriteLine($"{font.Key} is unloaded");
-            Raylib.UnloadFont(font.Value);
-        }
-    }
-
     public static void OnRender(double deltaTime)
     {
         var screen = config.Screens[screenIndex];
-        var bg = screen.BackgroundColor;
-        Raylib.ClearBackground(Config.ColorFromHex(screen.BackgroundColor));
+        // var bg = screen.BackgroundColor;
+        Raylib.ClearBackground(screen.BgColor);
 
         if (
             screen.Grid.Rows <= 0
@@ -159,7 +187,7 @@ class Program
                 && File.Exists(Path.Combine(Directory.GetCurrentDirectory(), cell.Text.FontFamily))
             )
             {
-                Raylib.DrawRectangle(glX, glY, glW, glH, Config.ColorFromHex(cell.BackgroundColor));
+                Raylib.DrawRectangle(glX, glY, glW, glH, cell.BgColor);
                 Vector2 textSize = Raylib.MeasureTextEx(
                     fonts[cell.Text.FontFamily],
                     cell.Text.Value,
@@ -181,22 +209,22 @@ class Program
                     _ => glY,
                 };
 
+                //replace the veriables with the actual values
+                foreach (var variable in GetVariables())
+                {
+                    cell.Text.Value = cell.Text.Value.Replace(
+                        $"{{{variable.Key}}}",
+                        variable.Value
+                    );
+                }
                 Raylib.DrawTextEx(
                     fonts[cell.Text.FontFamily],
                     cell.Text.Value,
                     new Vector2(x, y),
                     cell.Text.Size,
                     0f,
-                    Config.ColorFromHex(cell.Text.Color)
+                    cell.Text.FontColor
                 );
-                // Raylib.DrawTextEx(
-                //     fonts[cell.Text.FontFamily],
-                //     cell.Text.Value,
-                //     new System.Numerics.Vector2(glX, glY),
-                //     cell.Text.Size,
-                //     0f,
-                //     Color.Black
-                // );
             }
             else if (
                 cell.Media != null
@@ -217,21 +245,14 @@ class Program
             }
             else
             {
-                Raylib.DrawText("Invalid Cell Content", glX, glY, 20, Color.Red);
+                Raylib.DrawText("Invalid Cell", glX, glY, 20, Color.Red);
             }
             if (cell.Border)
             {
-                Raylib.DrawRectangleLinesEx(
-                    destRect,
-                    cell.BorderThickness,
-                    Config.ColorFromHex(cell.BorderColor)
-                );
+                Raylib.DrawRectangleLinesEx(destRect, cell.BorderThickness, cell.CellBorderColor);
             }
         }
     }
-
-    private static double screenTimer;
-    private static int screenIndex;
 
     public static void OnUpdate(double deltaTime)
     {
@@ -249,6 +270,5 @@ class Program
                 screenTimer = 0;
             }
         }
-        Console.WriteLine($"screen index : {screenIndex}");
     }
 }
