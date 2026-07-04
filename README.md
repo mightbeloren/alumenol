@@ -103,6 +103,15 @@ Accepts `#RRGGBB` or `#RRGGBBAA` (with or without leading `#`). Invalid or malfo
   }
 }
 ```
+## Build
+ 
+**Requirement: .NET 10 SDK** (mandatory, any OS).
+ 
+```
+dotnet publish --self-contained true -p:PublishSingleFile=true
+```
+ 
+Run on the target OS (cross-OS AOT/single-file publishing isn't supported — build Windows binaries on Windows, Linux on Linux, macOS on macOS).
 
 ## Known limitations
 
