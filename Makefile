@@ -15,7 +15,7 @@ PUBLISH_FLAGS := -c $(CONFIG) \
 all: $(RIDS)
 
 $(RIDS):
-	dotnet publish $(PROJECT) -r $@ $(PUBLISH_FLAGS) -o $(OUT)/$@
+	dotnet publish $(PROJECT) -r $@ $(PUBLISH_FLAGS) -p:AssemblyName=alumenol_$@ -o $(OUT)/$@
 
 winx64: win-x64
 winarm64: win-arm64
