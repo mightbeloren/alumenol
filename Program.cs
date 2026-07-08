@@ -105,11 +105,29 @@ class Program
                         )
                     )
                     {
-                        fonts[cell.Text.FontFamily] = Raylib.LoadFont(cell.Text.FontFamily);
+                        //check if the font already preloaded to prevent multiple loadfontex calls
+                        if (!fonts.ContainsKey(cell.Text.FontFamily))
+                        {
+                            fonts[cell.Text.FontFamily] = Raylib.LoadFontEx(
+                                cell.Text.FontFamily,
+                                130,
+                                null,
+                                0
+                            );
+                            //set smoothness texture fitler
+                            Raylib.SetTextureFilter(
+                                fonts[cell.Text.FontFamily].Texture,
+                                TextureFilter.Bilinear
+                            );
+                        }
                     }
                     else
                     {
                         fonts[cell.Text.FontFamily] = Raylib.GetFontDefault();
+                        Raylib.SetTextureFilter(
+                            fonts[cell.Text.FontFamily].Texture,
+                            TextureFilter.Bilinear
+                        );
                     }
                 }
             }
